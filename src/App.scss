@@ -1,0 +1,19 @@
+.title {
+  position: relative;
+  font-weight: 700;
+  font-size: 2.6rem;
+  line-height: 120%;
+  color: #42567a;
+  max-width: 20rem;
+  padding-left: 4rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, #3877ee 0%, #ef5da8 100%);
+    width: 4px;
+  }
+}
