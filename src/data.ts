@@ -1,4 +1,11 @@
-export const data = [
+import { HistoricalEvent } from "./pages/Browser/Browser";
+
+interface Data {
+  dates: number[];
+  events: HistoricalEvent[];
+}
+
+export const data: Data[] = [
   {
     dates: [2010, 2020],
     events: [
