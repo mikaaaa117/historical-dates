@@ -38,6 +38,7 @@ export const Controllers: FC<ControllersProps> = ({
         <div className="controllers__pagination">
           {[...Array(maxPages)].map((item, index) => (
             <li
+              key={index}
               className={`${page === index ? "active" : ""}`}
               onClick={() => setPage(index)}
             ></li>
