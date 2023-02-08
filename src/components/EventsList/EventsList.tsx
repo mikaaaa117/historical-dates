@@ -4,16 +4,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import "./EventsList.scss";
-import { FC, useEffect, useLayoutEffect, useRef } from "react";
+import { FC, useLayoutEffect, useRef } from "react";
 import { Navigation } from "swiper";
 import { EventItem } from "../EventItem/EventItem";
 import gsap from "gsap";
-
-interface HistoricalEvent {
-  id: number;
-  date: number;
-  body: string;
-}
+import { HistoricalEvent } from "@/pages/Browser/Browser";
 
 interface EventsProps {
   items: HistoricalEvent[];

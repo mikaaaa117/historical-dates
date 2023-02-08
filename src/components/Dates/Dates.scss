@@ -1,0 +1,27 @@
+.dates {
+  display: flex;
+  position: absolute;
+  gap: 3rem;
+  font-size: 10rem;
+  font-weight: 700;
+
+  &__first {
+    color: #5d5fef;
+  }
+
+  &__second {
+    color: #ef5da8;
+  }
+
+  @media (max-width: 430px) {
+    position: static;
+    width: 100%;
+    justify-content: space-between;
+    margin: 3rem auto;
+
+    &__first,
+    &__second {
+      font-size: 5rem;
+    }
+  }
+}

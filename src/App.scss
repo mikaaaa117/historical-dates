@@ -16,4 +16,11 @@
     background: linear-gradient(180deg, #3877ee 0%, #ef5da8 100%);
     width: 4px;
   }
+
+  @media (max-width: 430px) {
+    padding: 0;
+    &::before {
+      display: none;
+    }
+  }
 }

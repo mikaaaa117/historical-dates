@@ -1,0 +1,15 @@
+.horizontal-line {
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: rgba(66, 86, 122, 0.1);
+
+  &.absolute {
+    top: calc(50% - 1px);
+    position: absolute;
+  }
+
+  @media (max-width: 430px) {
+    height: 2px;
+  }
+}

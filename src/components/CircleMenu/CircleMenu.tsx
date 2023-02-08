@@ -1,6 +1,6 @@
 import "./CircleMenu.scss";
-import gsap from "gsap";
-import { useLayoutEffect, useState } from "react";
+import { HorizontalLine } from "../Lines/Horizontal/Line";
+import { Dates } from "../Dates/Dates";
 
 interface CircleMenuProps {
   maxPages: number;
@@ -16,10 +16,7 @@ export const CircleMenu: React.FC<CircleMenuProps> = ({
 }) => {
   return (
     <div className="circle-menu">
-      <span className="dates">
-        <span className="dates__first">{dates[0]}</span>
-        <span className="dates__second">{dates[1]}</span>
-      </span>
+      <Dates dates={dates} />
       <div className="circle">
         {[...Array(maxPages)].map((item, index) => {
           return (
@@ -42,6 +39,7 @@ export const CircleMenu: React.FC<CircleMenuProps> = ({
           );
         })}
       </div>
+      <HorizontalLine position="absolute" />
     </div>
   );
 };

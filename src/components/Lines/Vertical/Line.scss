@@ -1,0 +1,8 @@
+.vertical-line {
+  left: calc(50% - 1px);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: rgba(66, 86, 122, 0.1);
+}

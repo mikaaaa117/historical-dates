@@ -6,8 +6,15 @@
   padding: 5rem 0;
   border-left: 1px solid rgba(66, 86, 122, 0.1);
   border-right: 1px solid rgba(66, 86, 122, 0.1);
+  background-color: #f4f5f9;
 
   @media (max-width: 1440px) {
     padding: 5rem 1rem;
+  }
+
+  @media (max-width: 430px) {
+    max-width: 90%;
+    padding: 5rem 0;
+    border: none;
   }
 }
