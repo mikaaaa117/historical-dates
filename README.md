@@ -10,3 +10,6 @@ For build app enter in cmd:
 ```sh
 yarn build
 ```
+
+### Application has been deployed on GitHub Pages
+https://mikaaaa117.github.io/historical-dates/
