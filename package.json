@@ -1,7 +1,7 @@
-
+{
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://mikaaaa117.github.io/historical-dates",
+  "homepage": "http://mikaaaa117.github.iohistorical-dates",
   "dependencies": {
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
