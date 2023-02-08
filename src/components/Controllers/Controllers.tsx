@@ -1,4 +1,6 @@
 import { Dispatch, FC, SetStateAction } from "react";
+import { ReactComponent as NextIcon } from "../../icons/next-icon.svg";
+import { ReactComponent as PrevIcon } from "../../icons/prev-icon.svg";
 import { isMobile } from "react-device-detect";
 import "./Controllers.scss";
 
@@ -27,10 +29,10 @@ export const Controllers: FC<ControllersProps> = ({
         </div>
         <div className="navigation__buttons">
           <button onClick={handlePrevPage}>
-            <img src="/icons/prev-icon.svg" />
+            <PrevIcon />
           </button>
           <button onClick={handleNextPage}>
-            <img src="/icons/next-icon.svg" />
+            <NextIcon />
           </button>
         </div>
       </div>
