@@ -1,8 +1,10 @@
 :root {
   --rotate: 0deg;
+  --li-count: 0;
 }
 
 .circle-menu {
+  margin-top: -4rem;
   position: relative;
   display: flex;
   justify-content: center;
@@ -45,7 +47,9 @@
       width: 5rem;
       height: 5rem;
       transition: 0.3s ease;
-      transform: rotate(calc(360deg / 6 * var(--i) - var(--rotate)));
+      transform: rotate(
+        calc(360deg / var(--li-count) * var(--i) - var(--rotate))
+      );
 
       &.active span,
       &:hover span {
@@ -61,7 +65,9 @@
         align-items: center;
         & p {
           display: block;
-          transform: rotate(calc(360deg / -6 * var(--i) + var(--rotate)));
+          transform: rotate(
+            calc(360deg / (var(--li-count) * -1) * var(--i) + var(--rotate))
+          );
         }
       }
 

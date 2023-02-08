@@ -1,60 +1,22 @@
-import { CircleMenu, Container, EventsList } from "./components";
+import { CircleMenu, Container, Controllers, EventsList } from "./components";
 import "./App.scss";
-
-const items = [
-  {
-    id: 1,
-    date: 2023,
-    body: "Helllo world",
-  },
-  {
-    id: 2,
-    date: 2023,
-    body: "Helllo world",
-  },
-  {
-    id: 3,
-    date: 2023,
-    body: "Helllo world",
-  },
-  {
-    id: 4,
-    date: 2023,
-    body: "Helllo world",
-  },
-  {
-    id: 5,
-    date: 2023,
-    body: "Helllo world",
-  },
-  {
-    id: 6,
-    date: 2023,
-    body: "Helllo world",
-  },
-  {
-    id: 7,
-    date: 2023,
-    body: "Helllo world",
-  },
-  {
-    id: 8,
-    date: 2023,
-    body: "Helllo world",
-  },
-  {
-    id: 9,
-    date: 2023,
-    body: "Helllo world",
-  },
-];
+import { useState } from "react";
+import { data } from "./data";
 
 export const App = () => {
+  const [page, setPage] = useState(1);
+
   return (
     <Container>
       <h1 className="title">Исторические даты</h1>
-      <CircleMenu />
-      <EventsList items={items} />
+      <CircleMenu
+        maxPages={data.length}
+        dates={data[page].dates}
+        page={page}
+        setPage={setPage}
+      />
+      <Controllers page={page} maxPages={data.length} setPage={setPage} />
+      <EventsList items={data[page].events} />
     </Container>
   );
 };

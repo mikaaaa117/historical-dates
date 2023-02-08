@@ -6,6 +6,29 @@
 }
 
 .events-list {
-  height: 80px;
-  margin-top: 7rem;
+  height: 4rem;
+  margin-top: 4rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  background-color: #fff;
+  transition: 0.2s ease;
+  &.swiper-button-disabled {
+    display: none;
+  }
+
+  &::after {
+    display: flex;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+  }
 }
