@@ -1,4 +1,5 @@
 import { Dispatch, FC, SetStateAction } from "react";
+import { isMobile } from "react-device-detect";
 import "./Controllers.scss";
 
 interface ControllersProps {
@@ -20,17 +21,29 @@ export const Controllers: FC<ControllersProps> = ({
   };
   return (
     <div className="controllers">
-      <div className="controllers__page">
-        <span>0{page + 1}</span>/<span>0{maxPages}</span>
+      <div className="controllers__navigation">
+        <div className="navigation__page">
+          <span>0{page + 1}</span>/<span>0{maxPages}</span>
+        </div>
+        <div className="navigation__buttons">
+          <button onClick={handlePrevPage}>
+            <img src="/icons/prev-icon.svg" />
+          </button>
+          <button onClick={handleNextPage}>
+            <img src="/icons/next-icon.svg" />
+          </button>
+        </div>
       </div>
-      <div className="controllers__buttons">
-        <button onClick={handlePrevPage}>
-          <img src="/icons/prev-icon.svg" />
-        </button>
-        <button onClick={handleNextPage}>
-          <img src="/icons/next-icon.svg" />
-        </button>
-      </div>
+      {isMobile && (
+        <div className="controllers__pagination">
+          {[...Array(maxPages)].map((item, index) => (
+            <li
+              className={`${page === index ? "active" : ""}`}
+              onClick={() => setPage(index)}
+            ></li>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
